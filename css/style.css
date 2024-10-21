@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+html{
+    box-sizing: border-box;
+  }
+  
+
+  *,
+  *::before,
+  *::after{
+    box-sizing: inherit;
+  }
+  
+body{
+    max-width: 1760px;
+    font-size: 16px;
+    font-family: 'Nunito' ,serif; 
+    background-color:#fff;
+    color: #f8f6f9;
+       
+}
+
+@media(min-width:1760px){
+  body{
+    width: 1760px;
+    margin: 0 auto;
+  }
+}
+
+.header {
+    position: sticky;
+    top: 0px;
+    z-index: 5;
+    background-color: #fff;
+    margin-top: 15px;
+    max-width: 98.9vw;
+    height: 72px;
+    border-bottom:1px solid #cacad6;;
+}
+.conteiner {
+    margin: 0 auto;
+    width: 1260px;
+}
+.header_menu {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    max-height:82px;
+    align-items: center;
+}
+.header_img{
+    justify-self: end;
+    border-radius: 100%;
+    height:60px;
+    margin-right: 40px;
+    
+}
+
+
+.burger-bro{
+    display: flex;
+    background-color: inherit;
+    margin-left: 60px;
+    width: max-content ;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.burger-bro:hover{
+  background-color: #9a959560;
+}
+
+.burger-img{
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}
+
+
+
+.burger-text {
+    font-size: 16px;
+    font-weight: 550;
+    align-self: center;
+    
+    color: rgb(129, 15, 142);
+}
+.header_title {
+    padding-left: 75px;
+    justify-self: center;
+    letter-spacing: 4px;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-image:linear-gradient(2deg, #ca31ae,#8731b5,#25b4d1);                                             
+    font-size: 35px;
+    font-weight: 700;
+    
+}
+.title_img {
+    
+}
+
+
+ .informationLine {
+  margin-top: 0.5px;
+  position: relative;
+  height: 600px; 
+  width: 100%;
+}
+
+/* Контейнер для кнопок навигации */
+.informationLine_btn-nextContainer {
+  display: flex;
+  height: inherit;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
+/* Настройки кнопок навигации */
+.informationLine_btn-next {
+  background-color: #f8f6f9;
+  border: none;
+  width: 55px;
+  height: 53px;
+  font-size: 23px;
+  font-weight: 400;
+  z-index: 2;
+  opacity: 0; 
+  transition: opacity 0.3s ease; 
+}
+
+/* Показать кнопки при наведении на секцию */
+.informationLine:hover .informationLine_btn-next {
+  opacity: 1; 
+}
+
+/* Эффект наведения на кнопки */
+.informationLine_btn-next:hover {
+  background-color: #d5001c;
+  color: #fff;
+}
+
+/* Текстовая информация */
+.informationLine-text {
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  bottom: 93px; 
+  margin-left: 120px;
+  z-index: 1;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.362); 
+  transition: color 0.3s ease; 
+}
+
+.informationLine-text::before{
+  content: '';
+  position: absolute;
+  margin: 12px 0 0 -25px;
+  width: 20px;
+  height: 60px;
+  background-image: url('../image/Снимок\ экрана\ 2024-10-16\ 193306-Photoroom.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Эффект наведения на текст */
+.informationLine-text:hover {
+  color: #d5001c; 
+}
+
+/* Стили для контента */
+.informationLine_content {
+  padding-top: 1px;
+  visibility: hidden; 
+  transition: opacity 0.3s ease; /* Плавный переход для контента */
+}
+
+/* Активный контент */
+.informationLine_content--active {
+  visibility: visible; 
+}
+
+/* Стили для изображения */
+.informationLine_img {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  max-width: 1760px; 
+  max-height: 600px; 
+  filter: brightness(77%); 
+}
+
+/* Заголовок контента */
+.informationLine_title {
+  font-size: 34px;
+  padding-bottom: 5px;
+}
+
+/* Описание контента */
+.informationLine_description {
+  padding-left: 2px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* Кнопки выбора контента */
+.informationLine_box-btn {
+  display: flex;
+  position: absolute;
+  bottom: 40px;
+  left: 50%; 
+  transform: translateX(-50%); /* Корректировка смещения */
+}
+
+/* Индикаторы выбора контента */
+.informationLine_btn {
+  color: rgba(255, 255, 255, 0.56); 
+  margin-right: 25px;
+  border-radius: 100%; 
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* Активная кнопка выбора контента */
+.informationLine__btn--active {
+  color: #d5001c; 
+}
+
+
+
+.main {
+    opacity: 0;
+}
+.main_titleOne {
+    
+}
+.mainContent {
+}
+.mainContent_cards {
+}
+.mainContent_item {
+}
+.item_title {
+    letter-spacing: 2px;
+}
+.item_img {
+}
+.item_link-buy {
+}
+.item_link-info {
+}
